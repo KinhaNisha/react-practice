@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Sac, {val} from "./Sachin";
+import HorizontalScroll from "./HorizontalScroll";
+import Slider from "./Slider";
+import Greet from "./Greeting";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <>
+            <Greet />
+            <div>
+                <h1 style={{color: 'darkViolet', fontSize: '70px', marginLeft: '200px'}}>Nisha Kinha : React.js Developer</h1>
+            </div>
+            <h3 style={{color: 'blue', fontSize: '30px'}}>{val}</h3>
+            <Sac />
+            <h1><Sac /></h1>
+            <Slider />
+            <HorizontalScroll width={250} height={400}/> 
+        </>
+    );
+};
 
 export default App;
